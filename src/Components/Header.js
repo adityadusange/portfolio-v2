@@ -6,10 +6,11 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
-    const name = this.props.data.name;
-    const description = this.props.data.description;
+    
+    const github = "https://github.com/adityadusange";
+    const name = "Aditya Dusange";
+    const description =
+      "I am a passionate web developer with a Bachelor's degree in Computer Science (AIML) from Saraswati College of Engineering. My expertise lies in crafting dynamic, interactive web applications using modern technologies like React, PHP, MySQL, and Bootstrap. I also have a solid foundation in Java and Spring Boot, which I use to build robust backend systems. Driven by a passion for clean code and scalable architecture, I’m always looking for opportunities to create impactful digital experiences.";
 
     return (
       <header id="home">
@@ -67,10 +68,8 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
-                </a>
-                <a href={github} className="button btn github-btn">
+               
+                <a href={github} className="button align-items-center btn github-btn">
                   <i className="fa fa-github"></i>Github
                 </a>
               </ul>

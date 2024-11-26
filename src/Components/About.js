@@ -5,16 +5,14 @@ class About extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
-    const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
-    const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
+    const name = "Aditya Dusange";
+    const profilepic = "images/aa" + this.props.data.image;
+    const city = "Navi Mumbai";
+    const state = "Maharashtra";
+    const zip = 410208;
+    const phone = "+91"+"- 8828684503";
+    const email = "adityadusange25@gmail.com";
+    const resumeDownload = "Aditya dusange.pdf";
 
     return (
       <section id="about">
@@ -28,9 +26,7 @@ class About extends Component {
               />
             </div>
             <div className="nine columns main-col">
-              <h2>About Me</h2>
-
-              <p>{bio}</p>
+            
               <div className="row">
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
@@ -38,9 +34,8 @@ class About extends Component {
                     <span>{name}</span>
                     <br />
                     <span>
-                      {street}
-                      <br />
-                      {city} {state}, {zip}
+                     
+                      {city} {state}, <br /> {zip}
                     </span>
                     <br />
                     <span>{phone}</span>
@@ -50,7 +45,8 @@ class About extends Component {
                 </div>
                 <div className="columns download">
                   <p>
-                    <a href={resumeDownload} className="button">
+                    <a href={resumeDownload}
+                    download={resumeDownload}className="button">
                       <i className="fa fa-download"></i>Download Resume
                     </a>
                   </p>

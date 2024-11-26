@@ -15,31 +15,31 @@ class Resume extends Component {
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
-    const education = this.props.data.education.map(function (education) {
-      return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
-          <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
-          </p>
-          <p>{education.description}</p>
-        </div>
-      );
-    });
+    // const education = this.props.data.education.map(function (education) {
+    //   return (
+    //     <div key={education.school}>
+    //       <h3>{education.school}</h3>
+    //       <p className="info">
+    //         {education.degree} <span>&bull;</span>
+    //         <em className="date">{education.graduated}</em>
+    //       </p>
+    //       <p>{education.description}</p>
+    //     </div>
+    //   );
+    // });
 
-    const work = this.props.data.work.map(function (work) {
-      return (
-        <div key={work.company}>
-          <h3>{work.company}</h3>
-          <p className="info">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
-          </p>
-          <p>{work.description}</p>
-        </div>
-      );
-    });
+    // const work = this.props.data.work.map(function (work) {
+    //   return (
+    //     <div key={work.company}>
+    //       <h3>{work.company}</h3>
+    //       <p className="info">
+    //         {work.title}
+    //         <span>&bull;</span> <em className="date">{work.years}</em>
+    //       </p>
+    //       <p>{work.description}</p>
+    //     </div>
+    //   );
+    // });
 
     const skills = this.props.data.skills.map((skills) => {
       const backgroundColor = this.getRandomColor();
@@ -65,10 +65,20 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <div className="row item">
-                <div className="twelve columns">{education}</div>
+              <div className="row item p-4">
+                <div className="twelve columns">
+                  <h3>BACHELOR OF ENGINEERING (B.E), COMPUTER SCIENCE AIML</h3>
+                  <p className="">Saraswati College Of Engineering<br/><strong>2021-2024</strong></p>
+                  
+                </div>
+                <div className="twelve columns ">
+                  <h3>H.S.C</h3>
+                  <p className="">ICLES M.J<br/><strong>2019-2020</strong></p>
+                  
+                </div>
               </div>
             </div>
+            
           </div>
         </Slide>
 
@@ -80,7 +90,14 @@ class Resume extends Component {
               </h1>
             </div>
 
-            <div className="nine columns main-col">{work}</div>
+            <div className="nine columns main-col">
+            <div className="twelve columns">
+                  <h3>Software Developer (Intern)</h3>
+                  <p className="">Eddy tools<br/><strong>Sep-2022 TO Dec-2022</strong></p>
+                  
+                </div>
+
+            </div>
           </div>
         </Slide>
 
